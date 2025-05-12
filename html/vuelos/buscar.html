@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Vuelos</title>
+</head>
+<body>
+    <header>
+        <h1>Usuari@</h1>
+        <a href="../menu_y_cierre/cerrar.html">cerrar sesion</a>
+        <hr>
+    </header>
+    <main>
+        <h1>Busqueda de Vuelos</h1>
+        <form action="/profile">
+            <fieldset>
+                <input type="checkbox" name="ida" value="ida">Solo ida
+                <input type="text" name="origen" placeholder="Origen" required>
+                <input type="text" name="destino" placeholder="Destino" required>
+                <input type="date" name="date_ida" placeholder="Fecha de Salida" required>
+                <input type="date" name="date_vuelta" placeholder="Fecha de Regreso" required>
+            </fieldset>
+            <button type="submit">Buscar</button>
+        </form>
+    </main>
+    <footer>
+        <small>todos los derechos reservados</small>
+    </footer>
+</body>
+</html>
