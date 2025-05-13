@@ -1,24 +1,181 @@
-:root{
-    font-size: 16px;
+:root {
+    --color-primary: #0056b3; 
+    --color-secondary: #003366; 
+    --color-text-light: #ffffff; 
+    --color-text-dark: #333333; 
+    --color-background-light: #f4f7f6; 
+    --color-border: #cccccc; 
+    --color-link: #007bff; 
+    --color-link-hover: #0056b3; 
+
+    --font-family-sans-serif: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --font-family-serif: 'Georgia', serif;
+
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+    --spacing-extra-large: 50px;
+
+    --border-radius-small: 5px;
+    --border-radius-medium: 8px;
 }
 
-h1{
-    font-size: 1.5rem;
-}
-input{
-    width: 95vw;
-    height: 50px;
-}
-button{
-    width: auto;
-    height: 30px;
-}
-
-#check{
-    width: 80vw;
-    height: 12px;
+body {
+    font-family: var(--font-family-sans-serif);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
-body{
-    background-color: ;
+header {
+    background-color: var(--color-primary); 
+    color: var(--color-text-light);
+    padding: var(--spacing-medium) var(--spacing-large);
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-large); 
+}
+
+header img {
+    max-width: 150px; 
+    height: auto;
+    margin-bottom: var(--spacing-small);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--color-text-light); 
+}
+
+main {
+    background-color: var(--color-text-light);
+    padding: var(--spacing-large);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--spacing-large); 
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium); 
+}
+
+fieldset {
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius-small);
+    margin-bottom: var(--spacing-small);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+}
+
+fieldset input[type="email"],
+fieldset input[type="password"] {
+    width: calc(100% - var(--spacing-small) * 2); 
+    padding: var(--spacing-small);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+
+fieldset input::placeholder {
+    color: #999;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--color-text-dark);
+    cursor: pointer;
+}
+
+fieldset input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+button[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; 
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-link-hover);
+}
+
+main a {
+    color: var(--color-link);
+    text-decoration: none;
+    margin-top: var(--spacing-small);
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+main a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: auto; 
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: var(--spacing-small) 0;
+    font-size: 0.8em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: var(--spacing-small) var(--spacing-medium);
+    }
+
+    header h1 {
+            font-size: 1.5em;
+        }
+
+    main {
+        width: 95%;
+        padding: var(--spacing-medium);
+    }
+
+    button[type="submit"] {
+        font-size: 1em;
+    }
+
+    fieldset input[type="email"],
+    fieldset input[type="password"] {
+        padding: 8px;
+    }
 }
