@@ -1,181 +1,220 @@
 :root {
-    --color-primary: #0056b3; 
-    --color-secondary: #003366; 
-    --color-text-light: #ffffff; 
-    --color-text-dark: #333333; 
-    --color-background-light: #f4f7f6; 
-    --color-border: #cccccc; 
-    --color-link: #007bff; 
-    --color-link-hover: #0056b3; 
+    --color-primary: #007bff;       
+    --color-secondary: #e0aaff;     
+    --color-text-dark: #333333;      
+    --color-text-light: #ffffff;     
+    --color-background-light: #f5f5f5; 
+    --color-border: #cccccc;         
+    --color-shadow: rgba(0, 0, 0, 0.1); 
 
-    --font-family-sans-serif: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    --font-family-serif: 'Georgia', serif;
+    --font-family-base: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 1em;
+    --font-size-h1: 2em;
+    --font-size-h2: 1.5em;
+    --font-size-button: 1.1em;
+    --font-size-small: 0.9em;
 
-    --spacing-small: 10px;
-    --spacing-medium: 20px;
-    --spacing-large: 30px;
-    --spacing-extra-large: 50px;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xlarge: 32px;
 
     --border-radius-small: 5px;
-    --border-radius-medium: 8px;
+    --border-radius-medium: 10px;
+    --box-shadow-default: 0 2px 4px var(--color-shadow);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: var(--font-family-sans-serif);
-    margin: 0;
-    padding: 0;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
     background-color: var(--color-background-light);
     color: var(--color-text-dark);
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 header {
-    background-color: var(--color-primary); 
+    background-color: var(--color-secondary);
     color: var(--color-text-light);
     padding: var(--spacing-medium) var(--spacing-large);
     width: 100%;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: var(--spacing-large); 
+    box-shadow: var(--box-shadow-default);
 }
 
 header img {
-    max-width: 150px; 
+    max-width: 150px;
     height: auto;
     margin-bottom: var(--spacing-small);
 }
 
 header h1 {
+    font-size: var(--font-size-h1);
     margin: 0;
-    font-size: 2em;
-    color: var(--color-text-light); 
+}
+
+header h2 {
+    font-size: var(--font-size-h2);
+    margin-top: var(--spacing-small);
+    font-weight: normal; 
+}
+
+header a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: var(--font-size-small);
+    margin-top: var(--spacing-small);
+    display: block; 
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header hr {
+    border: none;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    margin: var(--spacing-medium) 0;
 }
 
 main {
     background-color: var(--color-text-light);
-    padding: var(--spacing-large);
     border-radius: var(--border-radius-medium);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-default);
+    padding: var(--spacing-large);
     width: 90%;
-    max-width: 400px; 
+    max-width: 400px;
+    margin: var(--spacing-large) 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin-bottom: var(--spacing-large); 
+}
+
+main h1 {
+    font-size: var(--font-size-h1);
+    margin-bottom: var(--spacing-medium);
 }
 
 form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-medium); 
+    gap: var(--spacing-medium);
 }
 
 fieldset {
     border: 1px solid var(--color-border);
-    padding: var(--spacing-medium);
     border-radius: var(--border-radius-small);
-    margin-bottom: var(--spacing-small);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-small);
+    padding: var(--spacing-medium);
+    width: 100%; 
 }
 
-fieldset input[type="email"],
-fieldset input[type="password"] {
-    width: calc(100% - var(--spacing-small) * 2); 
+fieldset input {
+    width: 100%;
     padding: var(--spacing-small);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-small);
-    font-size: 1em;
-    box-sizing: border-box; 
-}
-
-fieldset input::placeholder {
-    color: #999;
+    margin-bottom: var(--spacing-small); 
 }
 
 fieldset label {
     display: flex;
     align-items: center;
-    font-size: 0.9em;
-    color: var(--color-text-dark);
-    cursor: pointer;
+    margin-bottom: var(--spacing-small);
 }
 
 fieldset input[type="checkbox"] {
-    margin-right: 8px;
+    margin-right: var(--spacing-small);
 }
 
-button[type="submit"] {
+button {
     background-color: var(--color-primary);
     color: var(--color-text-light);
-    padding: var(--spacing-small) var(--spacing-medium);
     border: none;
-    border-radius: var(--border-radius-small);
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-medium) var(--spacing-large);
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: var(--font-size-button);
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    width: 100%; 
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+    width: 100%;
 }
 
-button[type="submit"]:hover {
-    background-color: var(--color-link-hover);
+button:hover {
+    background-color: #0056b3;
 }
 
-main a {
-    color: var(--color-link);
+
+a {
+    color: var(--color-primary);
     text-decoration: none;
     margin-top: var(--spacing-small);
-    font-size: 0.9em;
-    transition: color 0.3s ease;
+    font-size: var(--font-size-small);
+    display: inline-block; 
 }
 
-main a:hover {
-    color: var(--color-link-hover);
+a:hover {
     text-decoration: underline;
 }
 
 footer {
-    margin-top: auto; 
     width: 100%;
     background-color: var(--color-secondary);
     color: var(--color-text-light);
     text-align: center;
-    padding: var(--spacing-small) 0;
-    font-size: 0.8em;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-small);
+    font-size: var(--font-size-small);
+    margin-top: auto;
+    box-shadow: 0 -2px 4px var(--color-shadow);
+}
+
+footer small {
+    display: block; 
+}
+
+
+.form-group {
+    margin-bottom: var(--spacing-medium);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: var(--spacing-small);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
 }
 
 @media (max-width: 600px) {
-    header {
-        padding: var(--spacing-small) var(--spacing-medium);
-    }
-
-    header h1 {
-            font-size: 1.5em;
-        }
-
     main {
         width: 95%;
         padding: var(--spacing-medium);
     }
 
-    button[type="submit"] {
-        font-size: 1em;
+    header h1 {
+        font-size: 1.5em;
     }
 
-    fieldset input[type="email"],
-    fieldset input[type="password"] {
-        padding: 8px;
+    header h2 {
+        font-size: 1.2em;
     }
 }
