@@ -8,14 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>Iniciar Sesion</h1>
+        <h1>Iniciar Sesión</h1>
     </header>
     <main>
     <form action="../menu_y_cierre/menu.html" method="get" target="_blank">
         <fieldset>
             <input type="email" placeholder="Email" required/>
             <input type="password" placeholder="Contraseña" required/>
-            <input type="checkbox" name="recordar" value="save">Recordar mis datos
+            <label>
+                <input type="checkbox" name="recordar" value="save" id="check">Recordar mis datos
+            </label>
         </fieldset>
         <button type="submit">Iniciar Sesión</button>
     </form>

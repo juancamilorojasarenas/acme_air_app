@@ -1,0 +1,20 @@
+:root{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+input{
+    width: 80vw;
+    height: 50px;
+}
+button{
+    width: auto;
+    height: 30px;
+}
+
+#check{
+    width: 80vw;
+    height: 12px;
+}
