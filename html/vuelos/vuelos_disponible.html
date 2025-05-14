@@ -8,20 +8,25 @@
     <link rel="icon" href="/estilo/media/Isco.png" type="image/png">
 </head>
 <body>
+    <div class="desktop-warning">
+        <p>Esta aplicación está disponible solo para dispositivos móviles.</p>
+    </div>
     <header>
         <img src="/estilo/media/log2.png" alt="logo_secundario">
-        <img src="/estilo/media/icono.png" alt="icono">
-        <h1>Usuari@</h1>
-        <a href="../menu_y_cierre/cerrar.html">cerrar sesion</a>
+        <div class="usuario-header">
+            <img src="/estilo/media/icono.png" alt="icono_perfil" class="icono-perfil">
+            <h1>Usuari@</h1>
+            <a href="../menu_y_cierre/cerrar.html">Cerrar sesión</a>
+        </div>
         <hr>
     </header>
     <main>
         <h1>Vuelos Disponibles</h1>
 
         <form action="check_in.html" method="get">
+        <section>
             <fieldset>
                 <legend>Selecciona un vuelo</legend>
-
                 <img src="/estilo/media/iconic.png" alt="icono_vuelos">
                 <input type="radio" id="vuelo1" name="vuelo" value="1" required>
                 <label for="vuelo1">Vuelo 1: Bogotá → Medellín - 10:00 AM</label><br>
@@ -34,7 +39,7 @@
                 <input type="radio" id="vuelo3" name="vuelo" value="3">
                 <label for="vuelo3">Vuelo 3: Bogotá → Cartagena - 3:00 PM</label><br>
             </fieldset>
-
+        </section>
             <button type="submit">Continuar al Check In</button>
         </form>
 
