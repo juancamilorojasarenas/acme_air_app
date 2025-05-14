@@ -11,11 +11,10 @@ Acme Air App es una aplicacion web  frabicada por Acme Airlines para que los usu
 | 5 | Autores y créditos |
 
 ### Instalación del proyecto
-- Clona el repositorio o descarga el proyecto comprimido.
-- Abre la carpeta en tu editor preferido.
+- Descargar la pagina principal
 
 ### Uso 
-- 
+- Al abrir la pagina aparecera una opccion para logearse y el uso sigiguente es intuitivo
 
 ### Estado del proyecto
 Terminado.
