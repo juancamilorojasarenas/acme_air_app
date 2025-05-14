@@ -219,3 +219,29 @@ section {
         font-size: 1.1em;
     }
 }
+
+.desktop-warning {
+    display: none;
+    background-color: #ffdddd;
+    color: #900;
+    text-align: center;
+    padding: 2em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+    body > *:not(.desktop-warning) {
+        display: none !important;
+    }
+
+    .desktop-warning {
+        display: block;
+    }
+
+    body {
+        background-color: #fff0f0;
+        justify-content: center;
+        align-items: center;
+    }
+}
