@@ -33,7 +33,7 @@
             <fieldset>
                 <p>Contacto en caso de emergencia</p>
                 <input type="text" name="nombre_emerg" placeholder="Nombre Completo" required>
-                <input type="tel" name="tel_emgr" placeholder="No.telefono Celular" required>
+                <input type="tel" name="tel_emgr" placeholder="No.telefono Celular" required maxlength="10" pattern="[0-9]{10}">
             </fieldset>
             <button type="submit">Guardar</button>
         </form>

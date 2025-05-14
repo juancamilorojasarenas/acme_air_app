@@ -307,3 +307,14 @@ label {
     cursor: pointer;
     margin-top: var(--spacing-small);
 }
+
+select {
+    width: 100%;
+    padding: var(--spacing-small);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    background-color: var(--color-text-light);
+    color: var(--color-text-dark);
+}
